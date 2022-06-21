@@ -2,7 +2,7 @@ package com.sector.usersystem
 
 import android.os.Bundle
 import androidx.core.view.WindowCompat
-import com.sector.usersystem.presentation.presenter.common.activity.ActivityPresenter
+import com.sector.usersystem.presentation.presenter.activity.ActivityPresenter
 import com.sector.usersystem.presentation.view.activity.ActivityView
 import com.sector.usersystem.ui.common.BaseActivity
 import dagger.hilt.android.AndroidEntryPoint

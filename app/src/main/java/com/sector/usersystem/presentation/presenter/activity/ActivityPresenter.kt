@@ -1,4 +1,4 @@
-package com.sector.usersystem.presentation.presenter.common.activity
+package com.sector.usersystem.presentation.presenter.activity
 
 import com.sector.usersystem.presentation.presenter.common.BaseMvpPresenter
 import com.sector.usersystem.presentation.view.activity.ActivityView
