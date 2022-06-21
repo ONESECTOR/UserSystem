@@ -2,8 +2,9 @@ plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
-
+    id("kotlin-parcelize")
     id("dagger.hilt.android.plugin")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {
@@ -60,6 +61,12 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactive:$coroutinesVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
 
+    //Room
+    val roomVersion = "2.4.2"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    kapt("androidx.room:room-compiler:$roomVersion")
+
     // Moxy
     val moxyVersion = "2.2.2"
     implementation("com.github.moxy-community:moxy:$moxyVersion")
@@ -69,7 +76,7 @@ dependencies {
     kapt("com.github.moxy-community:moxy-compiler:$moxyVersion")
 
     // Hilt
-    val hilt = "2.39.1"
-    implementation("com.google.dagger:hilt-android:$hilt")
-    kapt("com.google.dagger:hilt-compiler:$hilt")
+    val hiltVersion = "2.39.1"
+    implementation("com.google.dagger:hilt-android:$hiltVersion")
+    kapt("com.google.dagger:hilt-compiler:$hiltVersion")
 }
