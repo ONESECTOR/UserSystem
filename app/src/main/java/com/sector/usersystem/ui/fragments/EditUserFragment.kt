@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.sector.usersystem.databinding.FragmentEditUserBinding
+import com.sector.usersystem.extensions.addSystemTopPadding
 import com.sector.usersystem.presentation.presenter.edit.EditUserPresenter
 import com.sector.usersystem.presentation.view.edit.EditUserView
 import com.sector.usersystem.ui.common.BaseFragment
@@ -34,7 +35,7 @@ class EditUserFragment : BaseFragment<FragmentEditUserBinding>(), EditUserView {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
-
+            root.addSystemTopPadding()
         }
     }
 }

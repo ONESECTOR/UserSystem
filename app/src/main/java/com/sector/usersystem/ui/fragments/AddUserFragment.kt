@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.sector.usersystem.databinding.FragmentAddUserBinding
+import com.sector.usersystem.extensions.addSystemTopPadding
 import com.sector.usersystem.presentation.presenter.add.AddUserPresenter
 import com.sector.usersystem.presentation.view.add.AddUserView
 import com.sector.usersystem.ui.common.BaseFragment
@@ -34,7 +35,7 @@ class AddUserFragment : BaseFragment<FragmentAddUserBinding>(), AddUserView {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
-
+            root.addSystemTopPadding()
         }
     }
 }

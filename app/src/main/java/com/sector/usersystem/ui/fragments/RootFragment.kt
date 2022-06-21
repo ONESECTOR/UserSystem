@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.sector.usersystem.databinding.FragmentRootBinding
+import com.sector.usersystem.extensions.addSystemTopPadding
 import com.sector.usersystem.presentation.presenter.root.RootPresenter
 import com.sector.usersystem.presentation.view.root.RootView
 import com.sector.usersystem.ui.common.BaseFragment
@@ -34,7 +35,7 @@ class RootFragment : BaseFragment<FragmentRootBinding>(), RootView {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
-
+            root.addSystemTopPadding()
         }
     }
 
