@@ -1,14 +1,14 @@
-package com.sector.usersystem.presentation.presenter
+package com.sector.usersystem.presentation.presenter.common.activity
 
 import com.sector.usersystem.presentation.presenter.common.BaseMvpPresenter
-import com.sector.usersystem.presentation.view.main.MainView
+import com.sector.usersystem.presentation.view.activity.ActivityView
 import moxy.InjectViewState
 import javax.inject.Inject
 
 @InjectViewState
-class MainPresenter
+class ActivityPresenter
 @Inject
-constructor(): BaseMvpPresenter<MainView>() {
+constructor(): BaseMvpPresenter<ActivityView>() {
 
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
