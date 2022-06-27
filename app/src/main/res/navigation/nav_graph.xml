@@ -8,5 +8,30 @@
         android:id="@+id/rootFragment"
         android:name="com.sector.usersystem.ui.fragments.root.RootFragment"
         android:label="fragment_root"
-        tools:layout="@layout/fragment_root" />
+        tools:layout="@layout/fragment_root" >
+        <action
+            android:id="@+id/action_rootFragment_to_addUserFragment"
+            app:destination="@id/addUserFragment" />
+        <action
+            android:id="@+id/action_rootFragment_to_showUserFragment"
+            app:destination="@id/showUserFragment" />
+        <action
+            android:id="@+id/action_rootFragment_to_editUserFragment"
+            app:destination="@id/editUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addUserFragment"
+        android:name="com.sector.usersystem.ui.fragments.add.AddUserFragment"
+        android:label="fragment_add_user"
+        tools:layout="@layout/fragment_add_user" />
+    <fragment
+        android:id="@+id/showUserFragment"
+        android:name="com.sector.usersystem.ui.fragments.show.ShowUserFragment"
+        android:label="fragment_show_user"
+        tools:layout="@layout/fragment_show_user" />
+    <fragment
+        android:id="@+id/editUserFragment"
+        android:name="com.sector.usersystem.ui.fragments.edit.EditUserFragment"
+        android:label="fragment_edit_user"
+        tools:layout="@layout/fragment_edit_user" />
 </navigation>

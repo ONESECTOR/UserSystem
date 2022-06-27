@@ -1,8 +1,11 @@
 package com.sector.usersystem.presentation.presenter.root
 
+import com.sector.usersystem.extensions.withMain
+import com.sector.usersystem.model.data.local.RecyclerViewType
 import com.sector.usersystem.model.interactor.UserInteractor
 import com.sector.usersystem.presentation.presenter.common.BaseMvpPresenter
 import com.sector.usersystem.presentation.view.root.RootView
+import com.sector.usersystem.ui.fragments.root.adapter.UserItem
 import kotlinx.coroutines.launch
 import moxy.InjectViewState
 import javax.inject.Inject
@@ -17,5 +20,25 @@ constructor(
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
 
+        createUserItems()
+    }
+
+    private fun createUserItems() {
+        scope.launch {
+            var users = userInteractor.getUsers()
+            val itemsList = mutableListOf<RecyclerViewType>()
+
+            for (user in users) {
+                itemsList.add(
+                    UserItem(
+                        name = user.name
+                    )
+                )
+            }
+
+            withMain {
+                viewState.setRootRv(itemsList)
+            }
+        }
     }
 }
