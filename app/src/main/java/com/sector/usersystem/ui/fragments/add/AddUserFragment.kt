@@ -1,13 +1,13 @@
-package com.sector.usersystem.ui.fragments
+package com.sector.usersystem.ui.fragments.add
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.sector.usersystem.databinding.FragmentShowUserBinding
+import com.sector.usersystem.databinding.FragmentAddUserBinding
 import com.sector.usersystem.extensions.addSystemTopPadding
-import com.sector.usersystem.presentation.presenter.show.ShowUserPresenter
-import com.sector.usersystem.presentation.view.show.ShowUserView
+import com.sector.usersystem.presentation.presenter.add.AddUserPresenter
+import com.sector.usersystem.presentation.view.add.AddUserView
 import com.sector.usersystem.ui.common.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 import moxy.ktx.moxyPresenter
@@ -15,17 +15,17 @@ import javax.inject.Inject
 import javax.inject.Provider
 
 @AndroidEntryPoint
-class ShowUserFragment : BaseFragment<FragmentShowUserBinding>(), ShowUserView {
+class AddUserFragment : BaseFragment<FragmentAddUserBinding>(), AddUserView {
 
     @Inject
-    lateinit var presenterProvider: Provider<ShowUserPresenter>
+    lateinit var presenterProvider: Provider<AddUserPresenter>
 
-    private val presenter: ShowUserPresenter by moxyPresenter { presenterProvider.get() }
+    private val presenter: AddUserPresenter by moxyPresenter { presenterProvider.get() }
 
     override fun onViewBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): FragmentShowUserBinding = FragmentShowUserBinding.inflate(
+    ): FragmentAddUserBinding = FragmentAddUserBinding.inflate(
         inflater,
         container,
         false

@@ -6,7 +6,7 @@
     app:startDestination="@id/rootFragment">
     <fragment
         android:id="@+id/rootFragment"
-        android:name="com.sector.usersystem.ui.fragments.RootFragment"
+        android:name="com.sector.usersystem.ui.fragments.root.RootFragment"
         android:label="fragment_root"
         tools:layout="@layout/fragment_root" />
 </navigation>

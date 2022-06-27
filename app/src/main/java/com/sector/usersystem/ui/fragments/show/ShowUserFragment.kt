@@ -1,13 +1,13 @@
-package com.sector.usersystem.ui.fragments
+package com.sector.usersystem.ui.fragments.show
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.sector.usersystem.databinding.FragmentRootBinding
+import com.sector.usersystem.databinding.FragmentShowUserBinding
 import com.sector.usersystem.extensions.addSystemTopPadding
-import com.sector.usersystem.presentation.presenter.root.RootPresenter
-import com.sector.usersystem.presentation.view.root.RootView
+import com.sector.usersystem.presentation.presenter.show.ShowUserPresenter
+import com.sector.usersystem.presentation.view.show.ShowUserView
 import com.sector.usersystem.ui.common.BaseFragment
 import dagger.hilt.android.AndroidEntryPoint
 import moxy.ktx.moxyPresenter
@@ -15,17 +15,17 @@ import javax.inject.Inject
 import javax.inject.Provider
 
 @AndroidEntryPoint
-class RootFragment : BaseFragment<FragmentRootBinding>(), RootView {
+class ShowUserFragment : BaseFragment<FragmentShowUserBinding>(), ShowUserView {
 
     @Inject
-    lateinit var presenterProvider: Provider<RootPresenter>
+    lateinit var presenterProvider: Provider<ShowUserPresenter>
 
-    private val presenter: RootPresenter by moxyPresenter { presenterProvider.get() }
+    private val presenter: ShowUserPresenter by moxyPresenter { presenterProvider.get() }
 
     override fun onViewBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
-    ): FragmentRootBinding = FragmentRootBinding.inflate(
+    ): FragmentShowUserBinding = FragmentShowUserBinding.inflate(
         inflater,
         container,
         false
@@ -38,5 +38,4 @@ class RootFragment : BaseFragment<FragmentRootBinding>(), RootView {
             root.addSystemTopPadding()
         }
     }
-
 }
