@@ -1,3 +1,7 @@
 <resources>
+    <!-- Spacings -->
+    <dimen name="spacing_16">16dp</dimen>
 
+    <!-- Font sizes -->
+    <dimen name="font_size_15">15sp</dimen>
 </resources>

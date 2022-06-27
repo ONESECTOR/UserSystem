@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Text">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="Text.Gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
+    <style name="SemiboldBlack" parent="Text">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+    </style>
+
+    <style name="SemiboldGray" parent="Text.Gray">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+    </style>
+
+</resources>
