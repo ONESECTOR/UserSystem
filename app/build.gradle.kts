@@ -79,4 +79,9 @@ dependencies {
     val hiltVersion = "2.39.1"
     implementation("com.google.dagger:hilt-android:$hiltVersion")
     kapt("com.google.dagger:hilt-compiler:$hiltVersion")
+
+    // AdapterDelegates
+    val adapterDelegates = "4.3.0"
+    implementation("com.hannesdorfmann:adapterdelegates4-kotlin-dsl-layoutcontainer:$adapterDelegates")
+    implementation("com.hannesdorfmann:adapterdelegates4-pagination:$adapterDelegates")
 }
