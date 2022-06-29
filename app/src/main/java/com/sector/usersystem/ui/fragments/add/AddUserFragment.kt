@@ -5,7 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.sector.usersystem.databinding.FragmentAddUserBinding
+import com.sector.usersystem.extensions.addSystemBottomMargin
 import com.sector.usersystem.extensions.addSystemTopPadding
+import com.sector.usersystem.extensions.hideSoftKeyboard
+import com.sector.usersystem.extensions.navigateUp
 import com.sector.usersystem.presentation.presenter.add.AddUserPresenter
 import com.sector.usersystem.presentation.view.add.AddUserView
 import com.sector.usersystem.ui.common.BaseFragment
@@ -36,6 +39,25 @@ class AddUserFragment : BaseFragment<FragmentAddUserBinding>(), AddUserView {
 
         binding?.apply {
             root.addSystemTopPadding()
+            btnAdd.addSystemBottomMargin()
+
+            toolbar.setNavigationOnClickListener {
+                hideSoftKeyboard()
+                navigateUp()
+            }
+
+            btnAdd.setOnClickListener {
+                getFromField()
+                navigateUp()
+            }
+        }
+    }
+
+    private fun getFromField() {
+        binding?.apply {
+            val name = etName.text.toString()
+
+            presenter.addUser(name)
         }
     }
 }

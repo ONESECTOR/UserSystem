@@ -11,8 +11,11 @@ class UserRepositoryImpl @Inject constructor(
     override suspend fun getUsers(): MutableList<User> =
         databaseProvider.userDao().getUsers()
 
-
     override suspend fun addUser(user: User) {
         databaseProvider.userDao().addUser(user)
+    }
+
+    override suspend fun deleteAll() {
+        databaseProvider.userDao().deleteAll()
     }
 }

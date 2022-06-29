@@ -13,4 +13,8 @@ class UserInteractor @Inject constructor(
     suspend fun addUser(user: User) {
         userRepository.addUser(user)
     }
+
+    suspend fun deleteAll() {
+        userRepository.deleteAll()
+    }
 }

@@ -14,4 +14,7 @@ interface UserDao {
 
     @Query("SELECT * FROM users ORDER BY id ASC")
     fun getUsers(): MutableList<User>
+
+    @Query("DELETE FROM users")
+    fun deleteAll()
 }

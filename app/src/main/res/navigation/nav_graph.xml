@@ -10,13 +10,13 @@
         android:label="fragment_root"
         tools:layout="@layout/fragment_root" >
         <action
-            android:id="@+id/action_rootFragment_to_addUserFragment"
+            android:id="@+id/onAdd"
             app:destination="@id/addUserFragment" />
         <action
-            android:id="@+id/action_rootFragment_to_showUserFragment"
+            android:id="@+id/onShow"
             app:destination="@id/showUserFragment" />
         <action
-            android:id="@+id/action_rootFragment_to_editUserFragment"
+            android:id="@+id/onEdit"
             app:destination="@id/editUserFragment" />
     </fragment>
     <fragment

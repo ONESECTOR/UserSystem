@@ -8,6 +8,7 @@ import com.hannesdorfmann.adapterdelegates4.ListDelegationAdapter
 import com.sector.usersystem.databinding.FragmentRootBinding
 import com.sector.usersystem.extensions.addSystemBottomMargin
 import com.sector.usersystem.extensions.addSystemTopPadding
+import com.sector.usersystem.extensions.navigate
 import com.sector.usersystem.model.data.local.RecyclerViewType
 import com.sector.usersystem.presentation.presenter.root.RootPresenter
 import com.sector.usersystem.presentation.view.root.RootView
@@ -41,6 +42,10 @@ class RootFragment : BaseFragment<FragmentRootBinding>(), RootView {
         binding?.apply {
             root.addSystemTopPadding()
             btnAdd.addSystemBottomMargin()
+
+            btnAdd.setOnClickListener {
+                onAdd()
+            }
         }
     }
 
@@ -58,6 +63,16 @@ class RootFragment : BaseFragment<FragmentRootBinding>(), RootView {
                 notifyDataSetChanged()
             }
         }
+    }
+
+    override fun onAdd() {
+        navigate(
+            RootFragmentDirections.onAdd()
+        )
+    }
+
+    override fun loadUsers() {
+        presenter.loadUsers()
     }
 
 }

@@ -1,8 +1,10 @@
 package com.sector.usersystem.extensions
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import androidx.annotation.DimenRes
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updateLayoutParams
@@ -43,5 +45,17 @@ fun View.addSystemBottomMargin(
             }
         }
         insets
+    }
+}
+
+fun View.hideSoftKeyboard(view: View = this, requestParentFocus: Boolean = false) {
+    val inputMethodManager =
+        view.context.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+    inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+    view.clearFocus()
+    when (requestParentFocus) {
+        true -> {
+            (view.parent as View).requestFocus()
+        }
     }
 }

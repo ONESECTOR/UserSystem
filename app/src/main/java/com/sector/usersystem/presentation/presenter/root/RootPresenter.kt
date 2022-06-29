@@ -1,5 +1,6 @@
 package com.sector.usersystem.presentation.presenter.root
 
+import com.sector.usersystem.entity.User
 import com.sector.usersystem.extensions.withMain
 import com.sector.usersystem.model.data.local.RecyclerViewType
 import com.sector.usersystem.model.interactor.UserInteractor
@@ -20,12 +21,11 @@ constructor(
     override fun onFirstViewAttach() {
         super.onFirstViewAttach()
 
-        createUserItems()
+        viewState.loadUsers()
     }
 
-    private fun createUserItems() {
+    private fun createUserItems(users: MutableList<User>) {
         scope.launch {
-            var users = userInteractor.getUsers()
             val itemsList = mutableListOf<RecyclerViewType>()
 
             for (user in users) {
@@ -39,6 +39,13 @@ constructor(
             withMain {
                 viewState.setRootRv(itemsList)
             }
+        }
+    }
+
+    fun loadUsers() {
+        scope.launch {
+            val users = userInteractor.getUsers()
+            createUserItems(users)
         }
     }
 }

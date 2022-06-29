@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/nqwis/AndroidStudioProjects/UserSystem/app/src/main/res/drawable/bg_gray.xml" value="0.213" />
+        <entry key="..\:/Users/nqwis/AndroidStudioProjects/UserSystem/app/src/main/res/drawable/ic_control_back.xml" value="0.2095" />
+        <entry key="..\:/Users/nqwis/AndroidStudioProjects/UserSystem/app/src/main/res/layout/activity_main.xml" value="0.2484375" />
         <entry key="..\:/Users/nqwis/AndroidStudioProjects/UserSystem/app/src/main/res/layout/content_main.xml" value="0.2484375" />
         <entry key="..\:/Users/nqwis/AndroidStudioProjects/UserSystem/app/src/main/res/layout/fragment_add_user.xml" value="0.23333333333333334" />
         <entry key="..\:/Users/nqwis/AndroidStudioProjects/UserSystem/app/src/main/res/layout/fragment_edit_user.xml" value="0.2484375" />
