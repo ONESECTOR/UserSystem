@@ -51,7 +51,7 @@ class RootAdapter(
 
 class UserItem(
     val id: Int,
-    val name: String = "name"
+    val name: String
 ): RecyclerViewType {
     override fun getViewType(): Int = 0
 }
