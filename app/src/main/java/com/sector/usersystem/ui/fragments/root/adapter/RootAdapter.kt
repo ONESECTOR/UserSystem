@@ -9,7 +9,7 @@ import com.sector.usersystem.model.data.local.RecyclerViewType
 import com.sector.usersystem.ui.common.adapter.BaseViewHolder
 
 class RootAdapter(
-    private val onClick: (UserItem) -> Unit
+    private val onClick: (Int, String) -> Unit
 ): AdapterDelegate<MutableList<RecyclerViewType>>() {
     override fun isForViewType(items: MutableList<RecyclerViewType>, position: Int): Boolean =
         items[position].getViewType() == 0
@@ -37,16 +37,21 @@ class RootAdapter(
 
             binding.apply {
                 tvName.text = item.name
+
+                tvName.setOnClickListener {
+                    onClick.invoke(
+                        item.id,
+                        item.name
+                    )
+                }
             }
         }
     }
 }
 
-
-
 class UserItem(
+    val id: Int,
     val name: String = "name"
 ): RecyclerViewType {
     override fun getViewType(): Int = 0
-
 }

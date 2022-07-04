@@ -31,6 +31,7 @@ constructor(
             for (user in users) {
                 itemsList.add(
                     UserItem(
+                        id = user.id,
                         name = user.name
                     )
                 )
@@ -45,6 +46,7 @@ constructor(
     fun loadUsers() {
         scope.launch {
             val users = userInteractor.getUsers()
+
             createUserItems(users)
         }
     }

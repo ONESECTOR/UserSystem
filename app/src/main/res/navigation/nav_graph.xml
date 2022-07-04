@@ -7,8 +7,8 @@
     <fragment
         android:id="@+id/rootFragment"
         android:name="com.sector.usersystem.ui.fragments.root.RootFragment"
-        android:label="fragment_root"
-        tools:layout="@layout/fragment_root" >
+        android:label="Root"
+        tools:layout="@layout/fragment_root">
         <action
             android:id="@+id/onAdd"
             app:destination="@id/addUserFragment" />
@@ -22,16 +22,23 @@
     <fragment
         android:id="@+id/addUserFragment"
         android:name="com.sector.usersystem.ui.fragments.add.AddUserFragment"
-        android:label="fragment_add_user"
+        android:label="Add"
         tools:layout="@layout/fragment_add_user" />
     <fragment
         android:id="@+id/showUserFragment"
         android:name="com.sector.usersystem.ui.fragments.show.ShowUserFragment"
-        android:label="fragment_show_user"
+        android:label="Show"
         tools:layout="@layout/fragment_show_user" />
     <fragment
         android:id="@+id/editUserFragment"
         android:name="com.sector.usersystem.ui.fragments.edit.EditUserFragment"
-        android:label="fragment_edit_user"
-        tools:layout="@layout/fragment_edit_user" />
+        android:label="Edit"
+        tools:layout="@layout/fragment_edit_user" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
 </navigation>
