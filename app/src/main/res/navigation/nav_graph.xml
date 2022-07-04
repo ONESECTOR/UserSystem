@@ -13,9 +13,6 @@
             android:id="@+id/onAdd"
             app:destination="@id/addUserFragment" />
         <action
-            android:id="@+id/onShow"
-            app:destination="@id/showUserFragment" />
-        <action
             android:id="@+id/onEdit"
             app:destination="@id/editUserFragment" />
     </fragment>
@@ -24,11 +21,6 @@
         android:name="com.sector.usersystem.ui.fragments.add.AddUserFragment"
         android:label="Add"
         tools:layout="@layout/fragment_add_user" />
-    <fragment
-        android:id="@+id/showUserFragment"
-        android:name="com.sector.usersystem.ui.fragments.show.ShowUserFragment"
-        android:label="Show"
-        tools:layout="@layout/fragment_show_user" />
     <fragment
         android:id="@+id/editUserFragment"
         android:name="com.sector.usersystem.ui.fragments.edit.EditUserFragment"
