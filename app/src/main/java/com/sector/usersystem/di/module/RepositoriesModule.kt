@@ -15,9 +15,7 @@ class RepositoriesModule {
 
     @Singleton
     @Provides
-    fun provideUserRepository(
-        databaseProvider: DatabaseProvider
-    ): UserRepository {
-        return UserRepositoryImpl(databaseProvider)
-    }
+    fun provideUserRepository(databaseProvider: DatabaseProvider): UserRepository =
+        UserRepositoryImpl(databaseProvider)
+
 }

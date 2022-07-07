@@ -14,9 +14,7 @@ class InteractorsModule {
 
     @Singleton
     @Provides
-    fun provideUserInteractor(
-        profileRepository: UserRepository
-    ): UserInteractor = UserInteractor(
-        profileRepository
-    )
+    fun provideUserInteractor(userRepository: UserRepository): UserInteractor =
+        UserInteractor(userRepository)
+
 }
