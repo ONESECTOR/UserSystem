@@ -8,6 +8,10 @@
         <item name="android:textColor">@color/gray</item>
     </style>
 
+    <style name="Text.Pink">
+        <item name="android:textColor">@color/primary_pink_100</item>
+    </style>
+
     <style name="RegularBlack" parent="Text">
         <item name="android:fontFamily">@font/inter_regular</item>
     </style>
@@ -21,6 +25,10 @@
     </style>
 
     <style name="SemiboldGray" parent="Text.Gray">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+    </style>
+
+    <style name="SemiboldPink" parent="Text.Pink">
         <item name="android:fontFamily">@font/inter_semibold</item>
     </style>
 

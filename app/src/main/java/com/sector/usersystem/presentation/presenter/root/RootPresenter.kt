@@ -50,4 +50,10 @@ constructor(
             createUserItems(users)
         }
     }
+
+    fun deleteAllUsers() {
+        scope.launch {
+            userInteractor.deleteAllUsers()
+        }
+    }
 }

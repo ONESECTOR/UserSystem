@@ -22,7 +22,7 @@ class UserInteractor @Inject constructor(
         userRepository.deleteUser(user)
     }
 
-    suspend fun deleteAll() {
-        userRepository.deleteAll()
+    suspend fun deleteAllUsers() {
+        userRepository.deleteAllUsers()
     }
 }

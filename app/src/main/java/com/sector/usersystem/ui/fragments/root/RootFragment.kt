@@ -41,10 +41,15 @@ class RootFragment : BaseFragment<FragmentRootBinding>(), RootView {
 
         binding?.apply {
             root.addSystemTopPadding()
-            btnAdd.addSystemBottomMargin()
+            btnDeleteAll.addSystemBottomMargin()
 
             btnAdd.setOnClickListener {
                 onAdd()
+            }
+
+            btnDeleteAll.setOnClickListener {
+                presenter.deleteAllUsers()
+                presenter.loadUsers()
             }
         }
     }

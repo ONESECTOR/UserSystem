@@ -11,8 +11,8 @@
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nsv_container"
         android:layout_width="match_parent"
-        android:fillViewport="true"
         android:layout_height="0dp"
+        android:fillViewport="true"
         app:layout_constraintBottom_toTopOf="@+id/btn_add"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -43,8 +43,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/spacing_16"
+        android:layout_marginBottom="16dp"
         android:text="Добавить"
-        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_delete_all"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/btn_delete_all"
+        style="@style/SemiboldPink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_16"
+        android:text="Удалить всё"
+        android:textAlignment="center"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

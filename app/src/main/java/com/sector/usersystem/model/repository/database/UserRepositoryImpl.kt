@@ -23,7 +23,7 @@ class UserRepositoryImpl @Inject constructor(
         databaseProvider.userDao().deleteUser(user)
     }
 
-    override suspend fun deleteAll() {
-        databaseProvider.userDao().deleteAll()
+    override suspend fun deleteAllUsers() {
+        databaseProvider.userDao().deleteAllUsers()
     }
 }
