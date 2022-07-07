@@ -20,6 +20,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/ic_control_back">
 
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingEnd="16dp"
+            android:src="@drawable/ic_filled_delete" />
+
     </com.google.android.material.appbar.MaterialToolbar>
 
     <com.google.android.material.textview.MaterialTextView

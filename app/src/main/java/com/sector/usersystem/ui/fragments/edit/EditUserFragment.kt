@@ -53,8 +53,23 @@ class EditUserFragment : BaseFragment<FragmentEditUserBinding>(), EditUserView {
                 getFromField()
                 navigateUp()
             }
+
+            btnDelete.setOnClickListener {
+                deleteUser()
+                navigateUp()
+            }
         }
     }
+
+    private fun deleteUser() {
+        binding?.apply {
+            val id = args.id
+            val name = etName.text.toString()
+
+            presenter.deleteUser(id, name)
+        }
+    }
+
 
     private fun getFromField() {
         binding?.apply {

@@ -29,4 +29,15 @@ constructor(
             userInteractor.updateUser(user)
         }
     }
+
+    fun deleteUser(id: Int, name: String) {
+        scope.launch {
+            val user = User(
+                id = id,
+                name = name
+            )
+
+            userInteractor.deleteUser(user)
+        }
+    }
 }
