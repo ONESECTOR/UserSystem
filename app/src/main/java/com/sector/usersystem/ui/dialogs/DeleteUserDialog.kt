@@ -7,21 +7,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import com.sector.usersystem.databinding.BottomSheetDeleteAllUsersBinding
+import com.sector.usersystem.databinding.BottomSheetDeleteUserBinding
 import com.sector.usersystem.extensions.setWhiteNavigationBar
 
-class DeleteAllUsersDialog(
+class DeleteUserDialog(
     private val onClick: () -> Unit
-) : BottomSheetDialogFragment() {
+): BottomSheetDialogFragment() {
 
-    private var binding: BottomSheetDeleteAllUsersBinding? = null
+    private var binding: BottomSheetDeleteUserBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = BottomSheetDeleteAllUsersBinding.inflate(layoutInflater)
+        binding = BottomSheetDeleteUserBinding.inflate(layoutInflater)
 
         return binding?.rootView
     }

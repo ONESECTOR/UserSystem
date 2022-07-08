@@ -26,4 +26,9 @@
     <string name="bsheet_delete_all_users_title">Вы уверены, что хотите удалить все записи?</string>
     <string name="bsheet_delete_all_users_description">Восстановить удаленные записи будет невозможно</string>
     <string name="bsheet_delete_all_users_button">Да, удалить</string>
+
+    <!-- Bottom sheet delete user -->
+    <string name="bsheet_delete_user_title">Вы уверены, что хотите удалить эту запись?</string>
+    <string name="bsheet_delete_user_description">Восстановить удаленную запись будет невозможно</string>
+    <string name="bsheet_delete_user_button">Да, удалить</string>
 </resources>

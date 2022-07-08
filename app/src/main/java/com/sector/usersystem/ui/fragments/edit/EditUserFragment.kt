@@ -12,6 +12,7 @@ import com.sector.usersystem.extensions.navigateUp
 import com.sector.usersystem.presentation.presenter.edit.EditUserPresenter
 import com.sector.usersystem.presentation.view.edit.EditUserView
 import com.sector.usersystem.ui.common.BaseFragment
+import com.sector.usersystem.ui.dialogs.DeleteUserDialog
 import dagger.hilt.android.AndroidEntryPoint
 import moxy.ktx.moxyPresenter
 import javax.inject.Inject
@@ -26,6 +27,15 @@ class EditUserFragment : BaseFragment<FragmentEditUserBinding>(), EditUserView {
     private val presenter: EditUserPresenter by moxyPresenter { presenterProvider.get() }
 
     private val args: EditUserFragmentArgs by navArgs()
+
+    private val deleteUserDialog by lazy {
+        DeleteUserDialog(
+            onClick = {
+                deleteUser()
+                navigateUp()
+            }
+        )
+    }
 
     override fun onViewBinding(
         inflater: LayoutInflater,
@@ -55,8 +65,7 @@ class EditUserFragment : BaseFragment<FragmentEditUserBinding>(), EditUserView {
             }
 
             btnDelete.setOnClickListener {
-                deleteUser()
-                navigateUp()
+                deleteUserDialog.show(childFragmentManager, "TAG")
             }
         }
     }
