@@ -22,4 +22,9 @@
 
     <!-- Item User -->
     <string name="item_user_name_title">Имя:</string>
+
+    <!-- Bottom sheet delete all users -->
+    <string name="bsheet_delete_all_users_title">Are you sure you want to delete all records?</string>
+    <string name="bsheet_delete_all_users_description">It will be impossible to recover deleted records</string>
+    <string name="bsheet_delete_all_users_button">Yes, delete</string>
 </resources>

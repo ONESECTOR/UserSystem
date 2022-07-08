@@ -22,4 +22,8 @@
     <!-- Item User -->
     <string name="item_user_name_title">Имя:</string>
 
+    <!-- Bottom sheet delete all users -->
+    <string name="bsheet_delete_all_users_title">Вы уверены, что хотите удалить все записи?</string>
+    <string name="bsheet_delete_all_users_description">Восстановить удаленные записи будет невозможно</string>
+    <string name="bsheet_delete_all_users_button">Да, удалить</string>
 </resources>

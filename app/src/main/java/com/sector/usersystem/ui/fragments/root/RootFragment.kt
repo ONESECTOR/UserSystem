@@ -13,6 +13,7 @@ import com.sector.usersystem.model.data.local.RecyclerViewType
 import com.sector.usersystem.presentation.presenter.root.RootPresenter
 import com.sector.usersystem.presentation.view.root.RootView
 import com.sector.usersystem.ui.common.BaseFragment
+import com.sector.usersystem.ui.dialogs.DeleteAllUsersDialog
 import com.sector.usersystem.ui.fragments.root.adapter.RootAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import moxy.ktx.moxyPresenter
@@ -26,6 +27,15 @@ class RootFragment : BaseFragment<FragmentRootBinding>(), RootView {
     lateinit var presenterProvider: Provider<RootPresenter>
 
     private val presenter: RootPresenter by moxyPresenter { presenterProvider.get() }
+
+    private val deleteAllUsersDialog by lazy {
+        DeleteAllUsersDialog(
+            onClick = {
+                presenter.deleteAllUsers()
+                presenter.loadUsers()
+            }
+        )
+    }
 
     override fun onViewBinding(
         inflater: LayoutInflater,
@@ -48,8 +58,9 @@ class RootFragment : BaseFragment<FragmentRootBinding>(), RootView {
             }
 
             btnDeleteAll.setOnClickListener {
-                presenter.deleteAllUsers()
-                presenter.loadUsers()
+                //presenter.deleteAllUsers()
+                //presenter.loadUsers()
+                deleteAllUsersDialog.show(childFragmentManager, "TAG")
             }
         }
     }

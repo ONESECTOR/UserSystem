@@ -13,4 +13,6 @@
 
     <color name="primary_pink_60">#FDA0CC</color>
     <color name="primary_pink_100">#FF0078</color>
+
+    <color name="gray_swipe_indicator">#1A000000</color>
 </resources>

@@ -5,7 +5,9 @@
     <dimen name="spacing_9">9dp</dimen>
     <dimen name="spacing_12">12dp</dimen>
     <dimen name="spacing_16">16dp</dimen>
+    <dimen name="spacing_26">26dp</dimen>
     <dimen name="spacing_36">36dp</dimen>
+    <dimen name="spacing_24">24dp</dimen>
 
     <!-- Font sizes -->
     <dimen name="font_size_10">10sp</dimen>
@@ -13,5 +15,7 @@
     <dimen name="font_size_18">18sp</dimen>
     <dimen name="font_size_20">20sp</dimen>
     <dimen name="font_size_15">15sp</dimen>
+    <dimen name="font_size_16">16sp</dimen>
     <dimen name="font_size_28">28sp</dimen>
+    <dimen name="font_size_32">32sp</dimen>
 </resources>
