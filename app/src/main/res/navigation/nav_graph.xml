@@ -11,10 +11,18 @@
         tools:layout="@layout/fragment_root">
         <action
             android:id="@+id/onAdd"
-            app:destination="@id/addUserFragment" />
+            app:destination="@id/addUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/onEdit"
-            app:destination="@id/editUserFragment" />
+            app:destination="@id/editUserFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/addUserFragment"
