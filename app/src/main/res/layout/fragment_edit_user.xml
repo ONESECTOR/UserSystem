@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:paddingBottom="16dp"
+    android:paddingBottom="@dimen/spacing_16"
     tools:context=".ui.fragments.add.AddUserFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -13,19 +13,20 @@
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:backgroundTint="@android:color/transparent"
-        android:paddingStart="8dp"
+        android:paddingStart="@dimen/spacing_8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/ic_control_back">
+        app:navigationIcon="@drawable/ic_control_back"
+        tools:ignore="RtlSymmetry">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/btn_delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="end"
-            android:paddingEnd="16dp"
+            android:paddingEnd="@dimen/spacing_16"
             android:src="@drawable/ic_filled_delete" />
 
     </com.google.android.material.appbar.MaterialToolbar>
@@ -34,12 +35,12 @@
         android:id="@+id/tv_edit_title"
         style="@style/SemiboldBlack"
         android:layout_width="wrap_content"
-        android:textAllCaps="false"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_16"
         android:paddingHorizontal="@dimen/spacing_16"
-        android:text="Изменение\nпользователя"
-        android:textSize="28sp"
+        android:text="@string/edit_title"
+        android:textAllCaps="false"
+        android:textSize="@dimen/font_size_28"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
@@ -47,11 +48,11 @@
         android:id="@+id/tv_edit_description"
         style="@style/RegularBlack"
         android:layout_width="wrap_content"
-        android:textAllCaps="false"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_4"
         android:paddingHorizontal="@dimen/spacing_16"
-        android:text="Здесь вы можете изменить выбранного пользователя"
+        android:text="@string/edit_description"
+        android:textAllCaps="false"
         android:textSize="@dimen/font_size_18"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_edit_title" />
@@ -73,29 +74,30 @@
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_marginHorizontal="@dimen/spacing_16"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="@dimen/spacing_36"
                 android:background="@drawable/bg_gray"
-                android:hint="Имя"
+                android:hint="@string/name"
                 android:inputType="textNoSuggestions"
                 android:lines="1"
                 android:paddingStart="@dimen/spacing_16"
                 android:textColorHint="@color/gray_81"
-                android:textSize="14sp"
+                android:textSize="@dimen/font_size_14"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry" />
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_et_name_label"
                 style="@style/Medium"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="9dp"
-                android:text="Имя"
-                android:textColor="@color/gray_81"
-                android:textSize="10sp"
+                android:layout_marginStart="@dimen/spacing_16"
+                android:layout_marginTop="@dimen/spacing_9"
+                android:text="@string/name"
                 android:textAllCaps="false"
+                android:textColor="@color/gray_81"
+                android:textSize="@dimen/font_size_10"
                 android:visibility="gone"
                 app:layout_constraintStart_toStartOf="@id/et_name"
                 app:layout_constraintTop_toTopOf="@id/et_name"
@@ -111,7 +113,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/spacing_16"
-        android:text="Изменить"
+        android:text="@string/edit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

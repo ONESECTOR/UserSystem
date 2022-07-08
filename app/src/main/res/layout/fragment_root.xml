@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/spacing_16"
         android:layout_marginBottom="@dimen/spacing_16"
-        android:text="@string/root_add_button"
+        android:text="@string/add"
         app:layout_constraintBottom_toTopOf="@id/btn_delete_all"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

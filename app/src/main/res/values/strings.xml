@@ -4,14 +4,22 @@
     <!-- Test strings -->
     <string name="test_username">Username</string>
 
+    <!-- Common -->
+    <string name="name">Name</string>
+    <string name="edit">Edit</string>
+    <string name="add">Add</string>
+
     <!-- Root -->
-    <string name="root_name_title">Name:</string>
-    <string name="root_add_button">Add</string>
     <string name="root_delete_all_button">Delete all</string>
 
     <!-- Add -->
-    <string name="add_name_title">Name</string>
-    <string name="add_button">Add</string>
     <string name="add_title">Adding a user</string>
     <string name="add_description">Here you can add a new user</string>
+
+    <!-- Edit -->
+    <string name="edit_title">Edit a user</string>
+    <string name="edit_description">Here you can edit selected user</string>
+
+    <!-- Item User -->
+    <string name="item_user_name_title">Имя:</string>
 </resources>

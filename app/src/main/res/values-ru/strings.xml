@@ -3,14 +3,23 @@
     <!-- Test strings -->
     <string name="test_username">Пользователь</string>
 
+    <!-- Common -->
+    <string name="name">Имя</string>
+    <string name="edit">Изменить</string>
+    <string name="add">Добавить</string>
+
     <!-- Root -->
-    <string name="root_name_title">Имя:</string>
-    <string name="root_add_button">Добавить</string>
     <string name="root_delete_all_button">Удалить все</string>
 
     <!-- Add -->
-    <string name="add_name_title">Имя</string>
-    <string name="add_button">Добавить</string>
     <string name="add_title">Добавление\nпользователя</string>
     <string name="add_description">Здесь вы можете добавить нового пользователя</string>
+
+    <!-- Edit -->
+    <string name="edit_title">Изменение\nпользователя</string>
+    <string name="edit_description">Здесь вы можете изменить выбранного пользователя</string>
+
+    <!-- Item User -->
+    <string name="item_user_name_title">Имя:</string>
+
 </resources>
