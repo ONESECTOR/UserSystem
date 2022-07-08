@@ -7,4 +7,10 @@
     <string name="root_name_title">Имя:</string>
     <string name="root_add_button">Добавить</string>
     <string name="root_delete_all_button">Удалить все</string>
+
+    <!-- Add -->
+    <string name="add_name_title">Имя</string>
+    <string name="add_button">Добавить</string>
+    <string name="add_title">Добавление\nпользователя</string>
+    <string name="add_description">Здесь вы можете добавить нового пользователя</string>
 </resources>
