@@ -38,7 +38,7 @@ class RootAdapter(
             binding.apply {
                 tvName.text = item.name
 
-                tvName.setOnClickListener {
+                itemView.setOnClickListener {
                     onClick.invoke(
                         item.id,
                         item.name
