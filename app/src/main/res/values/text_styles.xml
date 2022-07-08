@@ -4,6 +4,10 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="Text.LightBlack">
+        <item name="android:textColor">@color/black_80</item>
+    </style>
+
     <style name="Text.Gray">
         <item name="android:textColor">@color/gray</item>
     </style>
@@ -16,11 +20,19 @@
         <item name="android:fontFamily">@font/inter_regular</item>
     </style>
 
+    <style name="RegularGray" parent="Text.Gray">
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
     <style name="Medium" parent="Text">
         <item name="fontFamily">@font/inter_medium</item>
     </style>
 
     <style name="SemiboldBlack" parent="Text">
+        <item name="android:fontFamily">@font/inter_semibold</item>
+    </style>
+
+    <style name="SemiboldLightBlack" parent="Text.LightBlack">
         <item name="android:fontFamily">@font/inter_semibold</item>
     </style>
 

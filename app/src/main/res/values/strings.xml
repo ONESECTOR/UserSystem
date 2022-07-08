@@ -1,4 +1,11 @@
 <resources>
-    <string name="app_name">UserSystem</string>
+    <string name="app_name" translatable="false">UserSystem</string>
 
+    <!-- Test strings -->
+    <string name="test_username">Username</string>
+
+    <!-- Root -->
+    <string name="root_name_title">Name:</string>
+    <string name="root_add_button">Add</string>
+    <string name="root_delete_all_button">Delete all</string>
 </resources>

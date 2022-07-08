@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Test strings -->
+    <string name="test_username">Пользователь</string>
+
+    <!-- Root -->
+    <string name="root_name_title">Имя:</string>
+    <string name="root_add_button">Добавить</string>
+    <string name="root_delete_all_button">Удалить все</string>
+</resources>
