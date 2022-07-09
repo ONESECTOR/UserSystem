@@ -5,7 +5,7 @@
 
     <!-- Common -->
     <string name="name">Имя</string>
-    <string name="edit">Изменить</string>
+    <string name="save">Сохранить</string>
     <string name="add">Добавить</string>
 
     <!-- Root -->

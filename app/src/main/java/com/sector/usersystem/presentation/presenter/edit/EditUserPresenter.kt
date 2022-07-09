@@ -1,6 +1,7 @@
 package com.sector.usersystem.presentation.presenter.edit
 
 import com.sector.usersystem.entity.User
+import com.sector.usersystem.extensions.withMain
 import com.sector.usersystem.model.interactor.UserInteractor
 import com.sector.usersystem.presentation.presenter.common.BaseMvpPresenter
 import com.sector.usersystem.presentation.view.edit.EditUserView
@@ -19,12 +20,16 @@ constructor(
         super.onFirstViewAttach()
     }
 
-    fun updateUser(id: Int, name: String) {
+    fun updateUser(id: Int, name: String, action: () -> Unit) {
         scope.launch {
             val user = User(
                 id = id,
                 name = name
             )
+
+            withMain {
+                action.invoke()
+            }
 
             userInteractor.updateUser(user)
         }

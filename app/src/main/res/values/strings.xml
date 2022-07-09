@@ -6,7 +6,7 @@
 
     <!-- Common -->
     <string name="name">Name</string>
-    <string name="edit">Edit</string>
+    <string name="save">Save</string>
     <string name="add">Add</string>
 
     <!-- Root -->

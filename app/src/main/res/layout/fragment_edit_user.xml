@@ -61,7 +61,7 @@
         android:id="@+id/nsv_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@id/btn_edit"
+        app:layout_constraintBottom_toTopOf="@id/btn_save"
         app:layout_constraintTop_toBottomOf="@id/tv_edit_description">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -108,12 +108,13 @@
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_edit"
+        android:id="@+id/btn_save"
         style="@style/Button.Big"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/spacing_16"
-        android:text="@string/edit"
+        android:layout_marginBottom="0dp"
+        android:text="@string/save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

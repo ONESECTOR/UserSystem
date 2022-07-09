@@ -4,15 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.widget.addTextChangedListener
 import androidx.navigation.fragment.navArgs
+import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textview.MaterialTextView
 import com.sector.usersystem.databinding.FragmentEditUserBinding
-import com.sector.usersystem.extensions.addSystemTopPadding
-import com.sector.usersystem.extensions.hideSoftKeyboard
-import com.sector.usersystem.extensions.navigateUp
+import com.sector.usersystem.extensions.*
 import com.sector.usersystem.presentation.presenter.edit.EditUserPresenter
 import com.sector.usersystem.presentation.view.edit.EditUserView
 import com.sector.usersystem.ui.common.BaseFragment
 import com.sector.usersystem.ui.dialogs.DeleteUserDialog
+import com.sector.usersystem.ui.dialogs.SaveUserDialog
 import dagger.hilt.android.AndroidEntryPoint
 import moxy.ktx.moxyPresenter
 import javax.inject.Inject
@@ -37,6 +39,10 @@ class EditUserFragment : BaseFragment<FragmentEditUserBinding>(), EditUserView {
         )
     }
 
+    var fields: List<Pair<TextInputEditText, MaterialTextView>> = listOf()
+
+    private var startName = ""
+
     override fun onViewBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
@@ -51,17 +57,57 @@ class EditUserFragment : BaseFragment<FragmentEditUserBinding>(), EditUserView {
 
         binding?.apply {
             root.addSystemTopPadding()
+            btnSave.addSystemBottomMargin()
 
             toolbar.setNavigationOnClickListener {
                 hideSoftKeyboard()
-                navigateUp()
+
+                when(btnSave.isEnabled) {
+                    true -> saveData(
+                        onDismiss = {
+                            navigateUp()
+                        },
+                        action = {
+                            navigateUp()
+                        }
+                    )
+                    false -> {
+                        navigateUp()
+                    }
+                }
             }
 
             etName.setText(args.name)
 
-            btnEdit.setOnClickListener {
-                getFromField()
-                navigateUp()
+            startName = args.name
+
+            btnSave.isEnabled = false
+
+            listOf(
+                etName to tvEtNameLabel
+            ).also {
+                fields = it
+            }.forEach { et ->
+                et.first.setOnFocusChangeListener { v, hasFocus ->
+                    et.setActiveField(hasFocus)
+
+                    if (hasFocus) {
+                        v.showSoftKeyboard()
+                    }
+                }
+
+                et.first.addTextChangedListener {
+                    btnSave.isEnabled = (etName.text?.isNotEmpty() == true) && (etName.text.toString() != startName)
+                }
+            }
+
+            btnSave.setOnClickListener {
+                hideSoftKeyboard()
+
+                saveData {
+                    startName = etName.text.toString()
+                    btnSave.isEnabled = false
+                }
             }
 
             btnDelete.setOnClickListener {
@@ -79,13 +125,42 @@ class EditUserFragment : BaseFragment<FragmentEditUserBinding>(), EditUserView {
         }
     }
 
+    private fun saveData(onDismiss: () -> Unit = {}, action: () -> Unit = {}) {
+        SaveUserDialog(
+            onClick = {
+                val id = args.id
+                val name = binding?.etName?.text.toString()
 
-    private fun getFromField() {
-        binding?.apply {
-            val id = args.id
-            val name = etName.text.toString()
+                presenter.updateUser(id, name, action)
+            },
+            onDismiss = onDismiss
+        ).show(childFragmentManager, "TAG")
+    }
 
-            presenter.updateUser(id, name)
+    private fun Pair<TextInputEditText, MaterialTextView>.setActiveField(active: Boolean = true) {
+        when (active) {
+            true -> {
+                first.setPadding(
+                    (16).dpToPx(resources.displayMetrics.density),
+                    (15).dpToPx(resources.displayMetrics.density),
+                    0,
+                    0
+                )
+                first.hint = ""
+                second.visible()
+            }
+            false -> {
+                if (first.text?.isEmpty() == true) {
+                    first.setPadding(
+                        (16).dpToPx(resources.displayMetrics.density),
+                        0,
+                        0,
+                        0
+                    )
+                    second.gone()
+                }
+                first.hint = second.text
+            }
         }
     }
 }
