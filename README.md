@@ -4,6 +4,8 @@ UserSystemApp is an app built with [Kotlin][1] in which you can add, read, updat
 ## Architecture:
 * [MVP][3]
 * [Moxy][4]
+* [Singleton][8]
+* [Interactor][9]
 
 ## Dependency Injection
 * [Hilt for Android][5]
@@ -24,3 +26,5 @@ UserSystemApp is an app built with [Kotlin][1] in which you can add, read, updat
 [5]: https://developer.android.com/training/dependency-injection/hilt-android
 [6]: https://developer.android.com/kotlin/coroutines
 [7]: https://docs.gradle.org/current/userguide/kotlin_dsl.html
+[8]: https://en.wikipedia.org/wiki/Singleton_pattern
+[9]: https://proandroiddev.com/kotlin-clean-code-for-android-part-2-interactor-568122ab3be4
