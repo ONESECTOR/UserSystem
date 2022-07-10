@@ -31,4 +31,9 @@
     <string name="bsheet_delete_user_title">Вы уверены, что хотите удалить эту запись?</string>
     <string name="bsheet_delete_user_description">Восстановить удаленную запись будет невозможно</string>
     <string name="bsheet_delete_user_button">Да, удалить</string>
+
+    <!-- Bottom sheet save user -->
+    <string name="bsheet_save_user_title">Вы уверены, что хотите сохранить изменения?</string>
+    <string name="bsheet_save_user_description">Вы всегда можете изменить данные об этой записи</string>
+    <string name="bsheet_save_user_button">Да, сохранить</string>
 </resources>

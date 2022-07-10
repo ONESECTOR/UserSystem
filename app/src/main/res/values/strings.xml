@@ -32,4 +32,9 @@
     <string name="bsheet_delete_user_title">Are you sure you want to delete this record?</string>
     <string name="bsheet_delete_user_description">It will be impossible to recover deleted record</string>
     <string name="bsheet_delete_user_button">Yes, delete</string>
+
+    <!-- Bottom sheet save user -->
+    <string name="bsheet_save_user_title">Are you sure you want to save your changes?</string>
+    <string name="bsheet_save_user_description">You can always change the details of this record</string>
+    <string name="bsheet_save_user_button">Yes, save</string>
 </resources>
