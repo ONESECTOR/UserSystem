@@ -13,10 +13,10 @@ interface UserDao {
     fun getUsers(): MutableList<User>
 
     @Update
-    fun updateUser(user: User)
+    suspend fun updateUser(user: User)
 
     @Delete
-    fun deleteUser(user: User)
+    suspend fun deleteUser(user: User)
 
     @Query("DELETE FROM users")
     fun deleteAllUsers()
