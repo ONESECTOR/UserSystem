@@ -8,6 +8,8 @@
         <entry key="..\:/Users/nqwis/AndroidStudioProjects/UserSystem/app/src/main/res/drawable/bg_swipe_line.xml" value="0.1915" />
         <entry key="..\:/Users/nqwis/AndroidStudioProjects/UserSystem/app/src/main/res/drawable/ic_control_back.xml" value="0.2095" />
         <entry key="..\:/Users/nqwis/AndroidStudioProjects/UserSystem/app/src/main/res/drawable/ic_filled_delete.xml" value="0.213" />
+        <entry key="..\:/Users/nqwis/AndroidStudioProjects/UserSystem/app/src/main/res/drawable/ic_filled_delete_pressed.xml" value="0.166" />
+        <entry key="..\:/Users/nqwis/AndroidStudioProjects/UserSystem/app/src/main/res/drawable/selector_imageview.xml" value="0.166" />
         <entry key="..\:/Users/nqwis/AndroidStudioProjects/UserSystem/app/src/main/res/layout/activity_main.xml" value="0.2484375" />
         <entry key="..\:/Users/nqwis/AndroidStudioProjects/UserSystem/app/src/main/res/layout/bottom_sheet_delete_all_users.xml" value="0.24739583333333334" />
         <entry key="..\:/Users/nqwis/AndroidStudioProjects/UserSystem/app/src/main/res/layout/bottom_sheet_delete_user.xml" value="0.24739583333333334" />

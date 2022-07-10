@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:paddingEnd="@dimen/spacing_16"
-            android:src="@drawable/ic_filled_delete" />
+            android:src="@drawable/selector_imageview" />
 
     </com.google.android.material.appbar.MaterialToolbar>
 
