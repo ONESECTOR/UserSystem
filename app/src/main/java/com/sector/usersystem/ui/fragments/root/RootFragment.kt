@@ -58,8 +58,6 @@ class RootFragment : BaseFragment<FragmentRootBinding>(), RootView {
             }
 
             btnDeleteAll.setOnClickListener {
-                //presenter.deleteAllUsers()
-                //presenter.loadUsers()
                 deleteAllUsersDialog.show(childFragmentManager, "TAG")
             }
         }
