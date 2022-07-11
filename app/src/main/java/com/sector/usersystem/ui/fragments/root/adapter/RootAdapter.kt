@@ -1,5 +1,6 @@
 package com.sector.usersystem.ui.fragments.root.adapter
 
+import android.annotation.SuppressLint
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.hannesdorfmann.adapterdelegates4.AdapterDelegate
@@ -9,7 +10,7 @@ import com.sector.usersystem.model.data.local.RecyclerViewType
 import com.sector.usersystem.ui.common.adapter.BaseViewHolder
 
 class RootAdapter(
-    private val onClick: (Int, String) -> Unit
+    private val onClick: (Int, String, String) -> Unit
 ): AdapterDelegate<MutableList<RecyclerViewType>>() {
     override fun isForViewType(items: MutableList<RecyclerViewType>, position: Int): Boolean =
         items[position].getViewType() == 0
@@ -32,16 +33,18 @@ class RootAdapter(
     ): BaseViewHolder<ItemUserBinding>(
         parent.binding(ItemUserBinding::inflate)
     ) {
+        @SuppressLint("SetTextI18n")
         fun bind(item: RecyclerViewType, position: Int, count: Int) {
             item as UserItem
 
             binding.apply {
-                tvName.text = item.name
+                tvFullName.text = "${item.name} ${item.surname}"
 
                 itemView.setOnClickListener {
                     onClick.invoke(
                         item.id,
-                        item.name
+                        item.name,
+                        item.surname
                     )
                 }
             }
@@ -51,7 +54,8 @@ class RootAdapter(
 
 class UserItem(
     val id: Int,
-    val name: String
+    val name: String,
+    val surname: String
 ): RecyclerViewType {
     override fun getViewType(): Int = 0
 }

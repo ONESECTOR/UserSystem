@@ -40,5 +40,8 @@
         <argument
             android:name="id"
             app:argType="integer" />
+        <argument
+            android:name="surname"
+            app:argType="string" />
     </fragment>
 </navigation>

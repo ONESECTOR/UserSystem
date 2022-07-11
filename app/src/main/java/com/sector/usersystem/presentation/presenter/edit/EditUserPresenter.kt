@@ -20,11 +20,12 @@ constructor(
         super.onFirstViewAttach()
     }
 
-    fun updateUser(id: Int, name: String, action: () -> Unit) {
+    fun updateUser(id: Int, name: String, surname: String, action: () -> Unit) {
         scope.launch {
             val user = User(
                 id = id,
-                name = name
+                name = name,
+                surname = surname
             )
 
             withMain {
@@ -35,11 +36,12 @@ constructor(
         }
     }
 
-    fun deleteUser(id: Int, name: String) {
+    fun deleteUser(id: Int, name: String, surname: String) {
         scope.launch {
             val user = User(
                 id = id,
-                name = name
+                name = name,
+                surname = surname
             )
 
             userInteractor.deleteUser(user)

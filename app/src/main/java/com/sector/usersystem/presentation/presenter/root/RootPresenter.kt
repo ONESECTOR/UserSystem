@@ -32,7 +32,8 @@ constructor(
                 itemsList.add(
                     UserItem(
                         id = user.id,
-                        name = user.name
+                        name = user.name,
+                        surname = user.surname
                     )
                 )
             }

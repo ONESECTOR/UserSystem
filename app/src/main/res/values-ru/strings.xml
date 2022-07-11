@@ -5,8 +5,10 @@
 
     <!-- Common -->
     <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
     <string name="save">Сохранить</string>
     <string name="add">Добавить</string>
+    <string name="fullname">Имя, фамилия</string>
 
     <!-- Root -->
     <string name="root_delete_all_button">Удалить все</string>

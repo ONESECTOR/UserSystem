@@ -1,6 +1,5 @@
 package com.sector.usersystem.presentation.presenter.add
 
-import android.util.Log
 import com.sector.usersystem.entity.User
 import com.sector.usersystem.model.interactor.UserInteractor
 import com.sector.usersystem.presentation.presenter.common.BaseMvpPresenter
@@ -20,11 +19,10 @@ constructor(
         super.onFirstViewAttach()
     }
 
-    fun addUser(name: String) {
+    fun addUser(name: String, surname: String) {
         scope.launch {
-            val user = User(0, name)
+            val user = User(0, name, surname)
 
-            Log.d("user", user.name)
             userInteractor.addUser(user)
         }
     }

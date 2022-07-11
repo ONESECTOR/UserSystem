@@ -14,18 +14,18 @@
         android:padding="@dimen/spacing_12">
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_name_title"
+            android:id="@+id/tv_full_name_title"
             style="@style/RegularGray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
-            android:text="@string/item_user_name_title"
+            android:text="@string/fullname"
             android:textSize="@dimen/font_size_14"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_name"
+            android:id="@+id/tv_full_name"
             style="@style/SemiboldLightBlack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tv_name_title" />
+            app:layout_constraintTop_toBottomOf="@id/tv_full_name_title" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

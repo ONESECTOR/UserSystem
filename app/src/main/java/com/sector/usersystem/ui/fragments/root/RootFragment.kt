@@ -67,8 +67,8 @@ class RootFragment : BaseFragment<FragmentRootBinding>(), RootView {
         binding?.rvUsers?.apply {
             adapter = ListDelegationAdapter(
                 RootAdapter(
-                    onClick = { id, name ->
-                        onEdit(id, name)
+                    onClick = { id, name, surname ->
+                        onEdit(id, name, surname)
                     }
                 )
             ).apply {
@@ -89,11 +89,12 @@ class RootFragment : BaseFragment<FragmentRootBinding>(), RootView {
         presenter.loadUsers()
     }
 
-    private fun onEdit(id: Int, name: String) {
+    private fun onEdit(id: Int, name: String, surname: String) {
         navigate(
             RootFragmentDirections.onEdit(
                 id = id,
-                name = name
+                name = name,
+                surname = surname
             )
         )
     }

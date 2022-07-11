@@ -9,7 +9,7 @@ import com.sector.usersystem.model.data.database.UserDao
     entities = [
         User::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 abstract class DatabaseProvider: RoomDatabase() {

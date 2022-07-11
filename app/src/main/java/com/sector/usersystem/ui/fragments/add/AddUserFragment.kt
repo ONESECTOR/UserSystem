@@ -56,8 +56,9 @@ class AddUserFragment : BaseFragment<FragmentAddUserBinding>(), AddUserView {
     private fun getFromField() {
         binding?.apply {
             val name = etName.text.toString()
+            val surname = etSurname.text.toString()
 
-            presenter.addUser(name)
+            presenter.addUser(name, surname)
         }
     }
 }

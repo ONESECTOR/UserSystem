@@ -6,8 +6,10 @@
 
     <!-- Common -->
     <string name="name">Name</string>
+    <string name="surname">Surname</string>
     <string name="save">Save</string>
     <string name="add">Add</string>
+    <string name="fullname">Full name</string>
 
     <!-- Root -->
     <string name="root_delete_all_button">Delete all</string>

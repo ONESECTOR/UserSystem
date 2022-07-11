@@ -42,6 +42,7 @@ class EditUserFragment : BaseFragment<FragmentEditUserBinding>(), EditUserView {
     var fields: List<Pair<TextInputEditText, MaterialTextView>> = listOf()
 
     private var startName = ""
+    private var startSurname = ""
 
     override fun onViewBinding(
         inflater: LayoutInflater,
@@ -78,13 +79,16 @@ class EditUserFragment : BaseFragment<FragmentEditUserBinding>(), EditUserView {
             }
 
             etName.setText(args.name)
+            etSurname.setText(args.surname)
 
             startName = args.name
+            startSurname = args.surname
 
             btnSave.isEnabled = false
 
             listOf(
-                etName to tvEtNameLabel
+                etName to tvEtNameLabel,
+                etSurname to tvEtSurnameLabel
             ).also {
                 fields = it
             }.forEach { et ->
@@ -97,15 +101,21 @@ class EditUserFragment : BaseFragment<FragmentEditUserBinding>(), EditUserView {
                 }
 
                 et.first.addTextChangedListener {
-                    btnSave.isEnabled = (etName.text?.isNotEmpty() == true) && (etName.text.toString() != startName)
+                    btnSave.isEnabled =
+                        (etName.text?.isNotEmpty() == true && etSurname.text?.isNotEmpty() == true)
+                                && (etName.text.toString() != startName || etSurname.text.toString() != startSurname)
                 }
             }
+
+            fields[0].setActiveField()
+            fields[1].setActiveField()
 
             btnSave.setOnClickListener {
                 hideSoftKeyboard()
 
                 saveData {
                     startName = etName.text.toString()
+                    startSurname = etSurname.text.toString()
                     btnSave.isEnabled = false
                 }
             }
@@ -120,8 +130,9 @@ class EditUserFragment : BaseFragment<FragmentEditUserBinding>(), EditUserView {
         binding?.apply {
             val id = args.id
             val name = etName.text.toString()
+            val surname = etSurname.text.toString()
 
-            presenter.deleteUser(id, name)
+            presenter.deleteUser(id, name, surname)
         }
     }
 
@@ -130,8 +141,9 @@ class EditUserFragment : BaseFragment<FragmentEditUserBinding>(), EditUserView {
             onClick = {
                 val id = args.id
                 val name = binding?.etName?.text.toString()
+                val surname = binding?.etSurname?.text.toString()
 
-                presenter.updateUser(id, name, action)
+                presenter.updateUser(id, name, surname, action)
             },
             onDismiss = onDismiss
         ).show(childFragmentManager, "TAG")
