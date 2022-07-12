@@ -20,19 +20,19 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:text="@string/fullname"
-            android:textSize="@dimen/font_size_14"
+            android:textSize="@dimen/font_size_10"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_full_name"
-            style="@style/SemiboldLightBlack"
+            style="@style/Medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:lines="1"
             android:text="@string/test_username"
-            android:textSize="@dimen/font_size_20"
+            android:textSize="@dimen/font_size_14"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="parent"
